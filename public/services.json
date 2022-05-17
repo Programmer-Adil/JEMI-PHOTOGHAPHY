@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "One-hour photo shoots",
+        "price": 100,
+        "description": "One-hour photo shoots with all necessary equipment. Professional camera and lens kits. Professional camera and lens kits. Photo editing, color correction and retouching.",
+        "img": "https://i.ibb.co/HnpTJdw/service-1.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Half-day photo shoots",
+        "price": 200,
+        "description": "Half-day photo shoots with all necessary equipment. Professional camera and lens kits. Professional camera and lens kits. Photo editing, color correction and retouching.",
+        "img": "https://i.ibb.co/T0XcXvR/service-2.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Full-day photo shoots",
+        "price": 500,
+        "description": "Full-day photo shoots with all necessary equipment. Professional camera and lens kits. Professional camera and lens kits. Photo editing, color correction and retouching.",
+        "img": "https://i.ibb.co/bK3RFNS/service-3.jpg"
+    }
+]

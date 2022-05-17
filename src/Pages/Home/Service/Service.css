@@ -1,0 +1,38 @@
+.service-card {
+    border: 1px solid #ffe4d6;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.service-card {
+    text-align: justify;
+}
+
+.service-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.single-service-title {
+    color: #964315;
+}
+
+.price {
+    color: #964315;
+}
+
+.my-btn {
+    width: 100%;
+    outline: none;
+    background: #964315;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.my-btn:hover {
+    background: #3E1404;
+}
