@@ -1,0 +1,13 @@
+.navbar {
+    background-color: #3E1404;
+
+}
+
+.logo {
+    font-weight: 900;
+}
+
+.menu-item {
+    text-transform: uppercase;
+    font-weight: 700;
+}

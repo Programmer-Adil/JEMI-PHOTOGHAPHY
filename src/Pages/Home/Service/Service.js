@@ -4,7 +4,7 @@ import './Service.css'
 const Service = ({ service }) => {
     const { name, img, price, description } = service;
     return (
-        <div className='col-md-4 g-3'>
+        <div className='col-md-4 g-3 py-3'>
             <div className="service-card">
                 <img src={img} alt="" />
                 <h2 className='single-service-title'>{name}</h2>
