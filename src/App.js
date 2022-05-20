@@ -9,6 +9,7 @@ import Services from './Pages/Home/Services/Services';
 import ServiceDetails from './Pages/ServiceDetails/ServiceDetails';
 import NotFound from './Pages/Shared/NotFound/NotFound';
 import Login from './Pages/Login/Login';
+import SignUp from './Pages/Login/SignUp';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path='/services' element={<Services></Services>}></Route>
         <Route path='/service/:serviceName' element={<ServiceDetails></ServiceDetails>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/signup' element={<SignUp></SignUp>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>

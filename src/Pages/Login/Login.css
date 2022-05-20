@@ -1,0 +1,14 @@
+.login {
+    min-height: 100vh;
+}
+
+.signup-link {
+    color: #964315;
+
+}
+
+.signup-msg {
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+}
