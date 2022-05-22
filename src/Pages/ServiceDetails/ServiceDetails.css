@@ -1,3 +1,7 @@
+.service-details {
+    min-height: 100vh;
+}
+
 .service-name {
     color: #964315;
 }
