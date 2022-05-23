@@ -1,0 +1,12 @@
+.about-me-title {
+    color: #964315;
+}
+
+.about-me-para {
+    text-align: justify;
+}
+
+.about-me-img {
+    border: 1px solid #964315;
+    border-radius: 5px;
+}
