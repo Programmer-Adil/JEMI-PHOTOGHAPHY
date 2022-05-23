@@ -1,21 +1,38 @@
 import { Button } from 'react-bootstrap';
-import React from 'react';
+import React, { useState } from 'react';
 import { Form } from 'react-bootstrap';
 import './SignUp.css'
 import { useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init'
 import Social from './Social/Social';
+import Loading from '../Shared/Loading/Loading';
 
 
 const SignUp = () => {
+    const [agree, setAgree] = useState(false);
     const [
         createUserWithEmailAndPassword,
         user,
         loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+
+    console.log(error);
+
     const navigate = useNavigate();
+    if (error) {
+        return (
+            <div>
+                <p>{error.message}</p>
+            </div>
+        );
+    }
+
+
+    if (loading) {
+        return <Loading></Loading>
+    }
 
     if (user) {
         navigate('/home');
@@ -27,7 +44,9 @@ const SignUp = () => {
         const email = event.target.email.value;
         const password = event.target.password.value;
 
-        createUserWithEmailAndPassword(email, password);
+        if (agree) {
+            createUserWithEmailAndPassword(email, password);
+        }
     }
     const navigateLogin = event => {
         navigate('/login');
@@ -48,9 +67,9 @@ const SignUp = () => {
                     <Form.Control name="password" type="password" placeholder="Password" required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Accept terms and conditions." />
+                    <Form.Check onClick={() => setAgree(!agree)} type="checkbox" label="Accept terms and conditions." />
                 </Form.Group>
-                <Button className='w-100 mb-3' variant="primary" type="submit">Sign Up</Button>
+                <Button className='my-btn w-100 mb-3' type="submit">Sign Up</Button>
             </Form>
             <p className='signup-msg'>Already registered in JEMI PHOTOGRAPHY ? <span className='signup-link' onClick={navigateLogin}>Please Login.</span></p>
             <Social></Social>
