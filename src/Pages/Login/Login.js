@@ -28,7 +28,7 @@ const Login = () => {
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
     if (error) {
-        errorElement = <p className='text-danger'>Error: {error.message}</p>
+        errorElement = <p className='text-danger'>{error.message}</p>
     }
 
     if (loading || sending) {
@@ -67,12 +67,10 @@ const Login = () => {
             <h1>Please <span style={{ color: "#964315" }}>Login</span></h1>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Email address</Form.Label>
                     <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
                     <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
                 </Form.Group>
                 <Button className='w-100 my-btn' variant="primary" type="submit">Login</Button>
