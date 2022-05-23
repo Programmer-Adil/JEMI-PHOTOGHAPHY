@@ -5,3 +5,8 @@
 .service-name {
     color: #964315;
 }
+
+.service-details-para {
+    font-size: 18px;
+    text-align: justify;
+}

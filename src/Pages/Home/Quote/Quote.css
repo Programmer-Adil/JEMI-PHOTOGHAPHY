@@ -1,0 +1,13 @@
+.quote {
+    height: 350px;
+}
+
+.quote-bg {
+    background-color: #964315;
+}
+
+.quote-para p {
+    color: #fff;
+    font-weight: 700;
+    font-size: 22px;
+}
